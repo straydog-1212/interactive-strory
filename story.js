@@ -21,9 +21,9 @@ const name = prompt(`Hello there! Welcome to the world of pokémon! My name is O
         choices : 
     }
 };
-promptSteet1 = promt(`what are you going to do?`)
+promptSteet1 = promt(`what are you going to go? ${story.intro.choices}`)
 function whereAreYougoing(){
-    if(promptSteet1 == intro.choices || "1" ){
+    if(promptSteet1 == array|| "1" ){
         promt(`${intro.text}`);
 
     }else if(){
