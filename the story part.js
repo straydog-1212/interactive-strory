@@ -106,8 +106,8 @@ let story = {
     },
 }
 
+lkndbs
 
 
 
-
-//BiG boY YeET MaChiNe (richard seriously dont delete this if you see this first, you will ruin the entire project)
+//BiG boY YeET MaChiNe (richard seriously dont delete this if you see this first, you will ruin the entire project so dont.)
