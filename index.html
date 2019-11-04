@@ -8,22 +8,24 @@
    
 </head>
 <body>
-    <div id="title"><p>Day of the walking weeb!<p></div> 
+    <div id="title"><>Day of the walking weeb!<p></div> 
     <div id="oaks">You know I hate talking with these lose- oh... I'm  ... on ?! *Cough* Hello there! Welcome to the world of Anime! My name is Oak!
     People call me the Anime Prof! This world is inhabited by creatures called Weebs! 
     For some people, weebs are pets. Others use them for fights. Myself...I study weebs as a profession. Are you a boy or a girl?! 
     Ummmm... I guess I cant ask those types of questions any more! Atleast, I can ask this question!
     what is you name? what! you have already put your name! Well aren't you a quick one. You know what, just keep going!
     Seems like you didn't need me in the first place.</div>
+    <p>
+    <img class="centerImg" src="Doc Oak.PNG"
+    alt = "Picture of oaks" style="width: 500px ;height: 500px ;"/></p>
     
-    <div id="story"> </div>
-
-    <div id="button"> </div>
+    <div id="story"></div>
+    <div id="button"></div>
 
    
 <script type="text/javascript">
-    let storyContainer = document.getElementById("story");
-    let buttonContainer = document.getElementById("button");
+    let storyCon = document.getElementById("story");
+    let buttonCon = document.getElementById("button");
     let history = ["intro"];
     const story = {
     intro : {
@@ -160,14 +162,30 @@
 };
     function makeButton(btnText, choice){
             let button = document.createElement("button");
-            
-            
+            button.innerHTML = btnText;
+            buttonContainer.appendChild(button);
+            button.addEventListener ("click", function() {
+                history.push(choice);
+                showStory();
+            });
         }
         function buildStory(text) {
-            
+            let storyItem = document.createElement("p");
+            storyItem.innerText = text;
+            storyContainer.appendChild(storyItem);
         }
         function showStory(){
+            let currentPage = history[history.length - 1];
+            storyCon.innerHTML = "";
+            buttonCon.innerHTML = "";
             
+            for(let page of history){ 
+                buildStory(story[page].text);
+            }
+            
+            for(let choice of story[currentPage].choices){ 
+                makeButton(choice[0], choice[1])
+            }
         }
         showStory();
         
