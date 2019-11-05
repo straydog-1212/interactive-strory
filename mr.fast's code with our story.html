@@ -122,10 +122,6 @@
                     ["click me","goingW"]
                 ]
             },
-            going:{
-                text: "https://www.wendys.com/home"
-
-            },
             Mcdonalds: {
                 text: `Mcdonalds accept you into the family. The fight continues. 
                 if you wanted more tough luck try an other story line if you dare.`
@@ -212,8 +208,17 @@
             for(let choice of story[currentPage].choices){ 
                 makeButton(choice[0], choice[1])
             }
-        }
+        };
         showStory();
+        function goingToWendy(){
+            window.location.assign("https://www.wendys.com/home")
+        };
+        function goingToMcD(){
+            window.location.assign("https://www.mcdonalds.com/us/en-us.html")
+        };
+        function goingToBurgerKing(){
+            window.location.assign("https://www.bk.com/")
+        };  
         
         
     </script>
