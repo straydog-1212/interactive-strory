@@ -14,6 +14,9 @@
     <title>An Interactive Story</title>
 </head>
 <body>
+    <audio id="myAudio">
+            <source src="" type="audio/mpeg">
+    </audio>
     
     <div id="intro">
         <h1>Day of the walking weeb!</h1>
@@ -124,7 +127,10 @@
             },
             Mcdonalds: {
                 text: `Mcdonalds accept you into the family. The fight continues. 
-                if you wanted more tough luck try an other story line if you dare.`
+                if you wanted more tough luck try an other story line if you dare.`,
+                choices : [
+                    ["click me","goingD"]
+                ]
             },
             Plead : {
                 text: `The UN is appaled at your blatant disregard for human life and unimpressed at your understanding of international law. 
@@ -182,6 +188,9 @@
             },
             goingW: {
                 text:  ""
+            },
+            goingD: {
+                text: ""
             }
             
 };
@@ -193,12 +202,10 @@
                 button.addEventListener ("click", function() {
                     goingToWendy()
                 });
-            }else if(choice = ""){
-                goingToMcD()
-
-            }
-            else if(choice =""){
-                goingToBurgerKing()
+            }else if(choice === "goingD"){
+                button.addEventListener ("click", function() {
+                    goingToMcD()
+                });
             }
             else {
                 button.addEventListener ("click", function() {
@@ -233,9 +240,10 @@
         function goingToMcD(){
             window.location.assign("https://www.mcdonalds.com/us/en-us.html")
         };
-        function goingToBurgerKing(){
-            window.location.assign("https://www.bk.com/")
-        };  
+        function playJojo(){
+            hhghf.play();
+        };
+        
         
     </script>
       
