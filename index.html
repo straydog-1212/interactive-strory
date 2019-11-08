@@ -14,13 +14,10 @@
     <title>An Interactive Story</title>
 </head>
 <body>
-    <audio id="myAudio">
-            <source src="za warudo" type="audio/mpeg">
-    </audio>
-    
+    <audio id="myAudio" src="zaowlrd.mp3" type="audio/mpeg"></audio>
     <div id="intro">
         <h1>Day of the walking weeb!</h1>
-
+    </div>
         <p class= "oaks">You know I hate talking with these lose- oh... I'm  ... on ?! *Cough* Hello there! Welcome to the world of Anime! My name is Oak!
         People call me the Anime Prof! This world is inhabited by creatures called Weebs! 
         For some people, weebs are pets. Others use them for fights. Myself...I study weebs as a profession. Are you a boy or a girl?! 
@@ -183,14 +180,28 @@
 
             },
             za : {
-                text:`"Za-Warudo" you scream, "toki wo tomare." Time slows to a crawl and finally stops. you take a few steps towards the woman. One second has passed. you walk closer towards her. Two seconds have passed. You grab onto her arm. As you are about to jump out of the way, you  reach your new limit. time continues and you are both hit and killed by the truck. You die and you wake up in your room in front of the girl. She looks a bit different. Covered in armor. She tells you why you are here. "In another world there is threat, the demon king, a powerful monster that has been killing millions. You will be given magical powers in this alternate fantasy world. Your mission will be to  make a group of friends that will travel with you across the world and train to become strong enoough to defeat  the demon king you are told that you will be given magical  powers and sent to the alternate world.`,
-
+                text:`"Za-Warudo" you scream, "toki wo tomare."
+                Time slows to a crawl and finally stops. you take a few steps towards the woman. 
+                One second has passed. you walk closer towards her. Two seconds have passed. 
+                You grab onto her arm. As you are about to jump out of the way, you  reach your new limit. 
+                time continues and you are both hit and killed by the truck. You die and you wake up in your room 
+                in front of the girl. She looks a bit different. Covered in armor. She tells you why you are here. 
+                "In another world there is threat, the demon king, a powerful monster that has been killing millions. 
+                You will be given magical powers in this alternate fantasy world. Your mission will be to  make a group of 
+                friends that will travel with you across the world and train to become strong enoough to defeat  the demon 
+                king you are told that you will be given magical  powers and sent to the alternate world.`,
+                choices: [
+                    ["click me",'playZa']
+                    ]
             },
             goingW: {
                 text:  ""
             },
             goingD: {
                 text: ""
+            },
+            playZa:{
+                text:""
             }
             
 };
@@ -198,7 +209,12 @@
             let button = document.createElement("button");
             button.innerHTML = btnText;
             buttonContainer.appendChild(button);
-            if(choice === "goingW"){
+           
+            if(choice === "playZa"){
+                button.addEventListener ("click", function() {
+                    playJojo()
+                });
+            }else if(choice === "goingW"){
                 button.addEventListener ("click", function() {
                     goingToWendy()
                 });
@@ -206,13 +222,13 @@
                 button.addEventListener ("click", function() {
                     goingToMcD()
                 });
-            }
-            else {
+            }else {
                 button.addEventListener ("click", function() {
                     history.push(choice);
                     showStory();
                 }); 
-            }
+            };
+            
         }
         function buildStory(text) {
             let storyItem = document.createElement("p");
@@ -241,7 +257,8 @@
             window.location.assign("https://www.mcdonalds.com/us/en-us.html")
         };
         function playJojo(){
-            hhghf.play();
+           var myAudio = getElementById("myAudio")
+            myAudio.play();
         };
         
         
