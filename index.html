@@ -1,5 +1,10 @@
 <style>
-   
+   .centerImg{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+   }
 </style>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,24 +14,26 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>An Interactive Story</title>
 </head>
-<body>
+<body style="background-color:black; text-align: center; font-size: 30px;">
         <audio id= "Aud">
                 <source src="zaowlrd.mp3" type="audio/mpeg">
               Your browser does not support the audio element.
         </audio>
-    <div id="intro">
+    <div style="color: white;" id="intro">
         <h1>Day of the walking weeb!</h1>
     </div>
-        <p class= "oaks">You know I hate talking with these lose- oh... I'm  ... on ?! *Cough* Hello there! Welcome to the world of Anime! My name is Oak!
+        <p style="color: white;" class= "oaks">You know I hate talking with these lose- oh... I'm  ... on ?! *Cough* 
+            Hello there! Welcome to the world of Anime! My name is Oak!
         People call me the Anime Prof! This world is inhabited by creatures called Weebs! 
-        For some people, weebs are pets. Others use them for fights. Myself...I study weebs as a profession. Are you a boy or a girl?! 
+        For some people, weebs are pets. Others use them for fights. Myself...I study weebs as a profession. 
+        Are you a boy or a girl?! 
         Ummmm... I guess I cant ask those types of questions any more! Atleast, I can ask this question!
         what is you name? what! you have already put your name! Well aren't you a quick one. You know what, just keep going!
         Seems like you didn't need me in the first place.</p>
-    </div>
+    
     <p><img class="centerImg" src="Doc Oak.PNG"
-    alt = "Picture of oaks" style="width: 500px ;height: 500px ;"/></p>
-    <div id="story">
+    alt = "Picture of oaks" style="width: 400px ;height: 400px ;"/></p>
+    <div style="color: white;" id="story">
 
     </div>
 
@@ -43,7 +50,7 @@
         let history = ["intro"];
         const story = {
             intro : {
-                text : `${askName} take a step off the scale. You have gained a lot of weight. 
+                text : `${askName} take a step off the scale! You have gained a lot of weight. 
                 You decide to do some exersise in the form of walking every day. 
                 You walk out and decide which street you want to take.`,
                 choices : [
