@@ -1,9 +1,5 @@
 <style>
-    p.oaks{
-    color: blue;
-    text-size-adjust: 9px ;
-
-    };
+   
 </style>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +10,10 @@
     <title>An Interactive Story</title>
 </head>
 <body>
-    <audio id="myAudio" src="zaowlrd.mp3" type="audio/mpeg"></audio>
+        <audio id= "Aud">
+                <source src="zaowlrd.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+        </audio>
     <div id="intro">
         <h1>Day of the walking weeb!</h1>
     </div>
@@ -257,7 +256,7 @@
             window.location.assign("https://www.mcdonalds.com/us/en-us.html")
         };
         function playJojo(){
-           var myAudio = getElementById("myAudio")
+           var myAudio = document.getElementById("Aud")
             myAudio.play();
         };
         
